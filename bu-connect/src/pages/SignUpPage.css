@@ -78,7 +78,6 @@ html, body, #root {
   box-shadow: 0 8px 20px rgba(42, 133, 217, 0.10);
 }
 
-/* Card */
 .sign-signup-main {
   flex: 1;
   display: flex;
@@ -109,7 +108,6 @@ html, body, #root {
   letter-spacing: 1px;
 }
 
-/* Role Select */
 .sign-role-select {
   width: 100%;
   display: flex;
@@ -177,7 +175,6 @@ html, body, #root {
   box-shadow: 0 8px 20px rgba(42, 133, 217, 0.10);
 }
 
-/* Form */
 .sign-signup-form {
   width: 100%;
   display: flex;
@@ -246,7 +243,7 @@ html, body, #root {
   box-shadow: 0 8px 20px rgba(42, 133, 217, 0.10);
 }
 
-/* Link-like button for back */
+/* Back link */
 .sign-link-btn.sign-back-btn {
   background: none;
   border: none;

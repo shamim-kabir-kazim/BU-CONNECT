@@ -19,7 +19,7 @@ function LandingPage() {
     </div>
     <div className="header-right">
       <button className="btn login" onClick={() => navigate('/login')}>Sign In</button>
-      <button className="btn signup">Sign Up</button>
+      <button className="btn signup" onClick={() => navigate('/signup')} >Sign Up</button>
     </div>
   </div>
 </header>
@@ -29,7 +29,7 @@ function LandingPage() {
           <span className="welcome-text">WELCOME TO</span> <span className="bu-text">BU CONNECT</span>
         </h1>
         <p className="tagline">Your all in one university management system</p>
-        <button className="btn get-started">Get Started</button>
+        <button className="btn get-started" onClick={() => navigate('/login')}>Get Started</button>
         <h3 className="section-title">Features</h3>
         <div className="features">
           <div className="feature-box gradient1">

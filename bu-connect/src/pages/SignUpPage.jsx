@@ -15,26 +15,21 @@ function SignUpPage() {
   const [form, setForm] = useState({
     id: '',
     edumail: '',
-    // Additional fields below
     name: '',
     department: '',
-    // You can add more per role as needed
   });
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  // Handle input changes
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // Step 1: Role selection
   const handleRoleSelect = (selectedRole) => {
     setRole(selectedRole);
     setError('');
   };
 
-  // Continue to step 2
   const handleContinue = () => {
     if (!role) {
       setError('Please select a role to continue.');
@@ -44,22 +39,17 @@ function SignUpPage() {
     setError('');
   };
 
-  // Submit form (you can implement backend logic here)
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.id || !form.edumail) {
       setError('ID and EduMail are required.');
       return;
     }
-    // Add more validation per role if needed
     setError('');
-    // TODO: Send signup data to backend
     alert(`Signed up as ${role}! (implement backend)`);
-    // Optionally redirect
-    // navigate('/login');
+    // Optionally: navigate('/login');
   };
 
-  // Helper: Show fields based on role
   const renderRoleFields = () => {
     switch (role) {
       case 'student':
