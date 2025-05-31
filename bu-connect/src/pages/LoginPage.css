@@ -27,10 +27,10 @@ html, body, #root {
 
 .log-header-content {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  max-width: 1200px;
+
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
@@ -42,6 +42,12 @@ html, body, #root {
   gap: 1.5rem;
 }
 
+.log-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .log-logo {
   height: 70px;
 }
@@ -50,6 +56,42 @@ html, body, #root {
   font-size: 2.2rem;
   font-weight: bold;
   color: #d90429;
+}
+
+
+
+/* Remove default focus outline and box-shadow for login page buttons */
+.log-btn:focus,
+.log-login-btn:focus,
+.log-signup-btn:focus,
+.log-link-btn:focus,
+.log-btn:active,
+.log-login-btn:active,
+.log-signup-btn:active,
+.log-link-btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.log-btn.log-signup-btn {
+  background: linear-gradient(135deg, #0066ff, #3399ff);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(44, 169, 90, 0.12);
+}
+
+.log-btn.log-signup-btn:hover {
+  background: #fff;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  box-shadow: 0 8px 20px rgba(42, 133, 217, 0.10);
 }
 
 .log-login-main {

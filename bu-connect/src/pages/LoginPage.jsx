@@ -34,12 +34,21 @@ function LoginPage() {
             />
             <span className="log-university-name">Bangladesh University</span>
           </div>
+          <div className="log-header-right">
+            <button
+              className="log-btn log-signup-btn"
+              type="button"
+              onClick={() => navigate('/signup')}
+            >
+              Sign Up
+            </button>
+          </div>
         </div>
       </header>
 
       <main className="log-login-main">
         <div className="log-login-card">
-          <h2 className="log-login-title">Sign In to BU Connect</h2>
+          <h2 className="log-login-title">BU CONNECT</h2>
           <form className="log-login-form" onSubmit={handleSubmit} autoComplete="on">
             <div className="log-form-group">
               <label htmlFor="id">ID</label>
@@ -49,8 +58,7 @@ function LoginPage() {
                 name="id"
                 value={form.id}
                 onChange={handleChange}
-                placeholder="Enter your university ID"
-                autoComplete="username"
+                placeholder="Enter your ID"
                 required
               />
             </div>
@@ -79,14 +87,6 @@ function LoginPage() {
               onClick={() => navigate('/forgot-password')}
             >
               Forgot password?
-            </button>
-            <span className="log-divider">|</span>
-            <button
-              className="log-link-btn"
-              type="button"
-              onClick={() => navigate('/signup')}
-            >
-              Sign Up
             </button>
           </div>
         </div>
