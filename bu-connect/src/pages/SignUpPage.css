@@ -1,0 +1,299 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.sign-signup-container {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.sign-header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.sign-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sign-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sign-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sign-logo {
+  height: 70px;
+}
+
+.sign-university-name {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #d90429;
+}
+
+.sign-btn.sign-login-btn {
+  background: linear-gradient(135deg, #0066ff, #3399ff);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(44, 169, 90, 0.12);
+}
+
+.sign-btn.sign-login-btn:hover {
+  background: #fff;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  box-shadow: 0 8px 20px rgba(42, 133, 217, 0.10);
+}
+
+/* Card */
+.sign-signup-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+
+.sign-signup-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(44, 41, 120, 0.13);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-signup-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Role Select */
+.sign-role-select {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-role-select-label {
+  font-size: 1.12rem;
+  font-weight: 550;
+  margin-bottom: 0.7rem;
+}
+
+.sign-role-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.sign-role-btn {
+  background: #f3f4fa;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  border-radius: 25px;
+  padding: 0.5rem 1.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+  box-shadow: none;
+}
+.sign-role-btn.selected,
+.sign-role-btn:active,
+.sign-role-btn:focus {
+  background: linear-gradient(135deg, #1976d2, #3399ff);
+  color: #fff;
+  border: 2px solid #1976d2;
+  outline: none;
+  box-shadow: none;
+}
+
+.sign-btn.sign-continue-btn {
+  background: linear-gradient(135deg, #0066ff, #3399ff);
+  color: white;
+  padding: 0.7rem 1.7rem;
+  font-size: 1.14rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(44, 169, 90, 0.12);
+  width: 100%;
+}
+
+.sign-btn.sign-continue-btn:hover {
+  background: #fff;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  box-shadow: 0 8px 20px rgba(42, 133, 217, 0.10);
+}
+
+/* Form */
+.sign-signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.sign-form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.sign-form-group label {
+  font-size: 1.04rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #8453df;
+}
+
+.sign-form-group input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 1.06rem;
+  background: #f6f6fa;
+  color: #222;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+
+.sign-form-group input:focus {
+  border: 2px solid #1976d2;
+  outline: none;
+  background: #ffffff;
+}
+
+.sign-signup-error {
+  color: #d90429;
+  font-size: 1.06rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  width: 100%;
+}
+
+.sign-btn.sign-signup-btn {
+  background: linear-gradient(135deg, #0066ff, #3399ff);
+  color: white;
+  padding: 0.7rem 1.7rem;
+  font-size: 1.13rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(44, 169, 90, 0.12);
+}
+
+.sign-btn.sign-signup-btn:hover {
+  background: #fff;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  box-shadow: 0 8px 20px rgba(42, 133, 217, 0.10);
+}
+
+/* Link-like button for back */
+.sign-link-btn.sign-back-btn {
+  background: none;
+  border: none;
+  color: #2a85d9;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s;
+  text-decoration: underline;
+}
+
+.sign-link-btn.sign-back-btn:hover {
+  color: #8453df;
+  text-decoration: underline;
+}
+
+/* Remove focus/active outlines for all buttons */
+.sign-btn:focus,
+.sign-signup-btn:focus,
+.sign-login-btn:focus,
+.sign-role-btn:focus,
+.sign-btn:active,
+.sign-signup-btn:active,
+.sign-login-btn:active,
+.sign-role-btn:active,
+.sign-link-btn:focus,
+.sign-link-btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.sign-footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .sign-signup-card {
+    padding: 1.5rem 0.5rem;
+    max-width: 97vw;
+  }
+  .sign-header-content {
+    padding: 1rem 0.5rem;
+  }
+}
