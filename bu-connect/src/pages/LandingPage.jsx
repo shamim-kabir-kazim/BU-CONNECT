@@ -1,0 +1,59 @@
+import React from 'react';
+import './LandingPage.css';
+
+function LandingPage() {
+  return (
+    <div className="landing-container">
+      <header className="header">
+        <div className="header-left">
+          <img
+            src="https://i.postimg.cc/cLbWyd3Q/channels4_profile-removebg-preview_upscaled.png"
+            alt="BU Logo"
+            className="logo"
+          />
+          <span className="university-name">Bangladesh University</span>
+        </div>
+        <div className="header-right">
+          <button className="btn login">Sign In</button>
+          <button className="btn signup">Sign Up</button>
+        </div>
+      </header>
+
+      <main className="main-content">
+        <h1 className="main-heading">
+  <span className="welcome-text">WELCOME TO</span> <span className="bu-text">BU CONNECT</span>
+</h1>
+
+        <p className="tagline">Your all in one university management system</p>
+        <button className="btn get-started">Get Started</button>
+
+        <h3 className="section-title">Features</h3>
+        <div className="features">
+  <div className="feature-box gradient1">
+    <img src="https://img.icons8.com/color/48/student-center.png" alt="Student Dashboard" className="feature-icon" />
+    <span>Student Dashboard</span>
+  </div>
+  <div className="feature-box gradient2">
+    <img src="https://img.icons8.com/color/48/teacher.png" alt="Faculty Management" className="feature-icon" />
+    <span>Faculty Management</span>
+  </div>
+  <div className="feature-box gradient3">
+    <img src="https://img.icons8.com/color/48/calendar.png" alt="Course Scheduling" className="feature-icon" />
+    <span>Course Scheduling</span>
+  </div>
+  <div className="feature-box gradient4">
+    <img src="https://img.icons8.com/color/48/test-passed.png" alt="Exam Results" className="feature-icon" />
+    <span>Exam Results</span>
+  </div>
+</div>
+
+      </main>
+
+      <footer className="footer">
+        <p>This is an open source project by Bangladesh University students.</p>
+      </footer>
+    </div>
+  );
+}
+
+export default LandingPage;
