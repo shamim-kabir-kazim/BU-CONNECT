@@ -1,4 +1,3 @@
-/* Container & Layout */
 .landing-container {
   height: 100vh;
   width: 100vw;
@@ -7,17 +6,26 @@
   background: #f9f9f9;
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
-/* Header */
 .header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 99vw;     /* Or whatever max width you want */
+  margin: 0 auto;        /* Center the content horizontally */
+  width: 100%;
+  box-sizing: border-box;
 }
+
 
 .header-left {
   display: flex;
