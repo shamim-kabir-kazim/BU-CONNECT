@@ -31,19 +31,19 @@ function LandingPage() {
         <div className="features">
   <div className="feature-box gradient1">
     <img src="https://img.icons8.com/color/48/student-center.png" alt="Student Dashboard" className="feature-icon" />
-    <span>Student Dashboard</span>
+    <span>Manage Courses and Schedules</span>
   </div>
   <div className="feature-box gradient2">
     <img src="https://img.icons8.com/color/48/teacher.png" alt="Faculty Management" className="feature-icon" />
-    <span>Faculty Management</span>
+    <span>Student and Faculty Profiles</span>
   </div>
   <div className="feature-box gradient3">
     <img src="https://img.icons8.com/color/48/calendar.png" alt="Course Scheduling" className="feature-icon" />
-    <span>Course Scheduling</span>
+    <span>Attendance and Grade Tracking</span>
   </div>
   <div className="feature-box gradient4">
     <img src="https://img.icons8.com/color/48/test-passed.png" alt="Exam Results" className="feature-icon" />
-    <span>Exam Results</span>
+    <span>Real Time Notification</span>
   </div>
 </div>
 

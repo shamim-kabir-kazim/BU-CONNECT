@@ -53,6 +53,23 @@
   font-weight: 600;
 }
 
+.btn,
+.login,
+.signup,
+.get-started {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:focus,
+.login:focus,
+.signup:focus,
+.get-started:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
 .login {
   background-color: transparent;
   color: #2a85d9;
