@@ -43,7 +43,8 @@ function LandingPage() {
   </div>
   <div className="feature-box gradient4">
     <img src="https://img.icons8.com/color/48/test-passed.png" alt="Exam Results" className="feature-icon" />
-    <span>Real Time Notification</span>
+    <span>Real Time 
+        Notification</span>
   </div>
 </div>
 
