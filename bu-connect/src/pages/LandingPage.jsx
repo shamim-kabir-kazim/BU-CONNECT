@@ -1,35 +1,60 @@
-import React from 'react';
-import './LandingPage.css';
+import React from "react";
+import "./LandingPage.css";
 
-const LandingPage = () => {
+export default function LandingPage() {
   return (
-    <div className="landing-page">
-      <header className="header">
-        <div className="container">
-          <h1 className="logo">UniManage</h1>
-          <nav>
-            <a href="#signin" className="btn">Sign In</a>
-            <a href="#signup" className="btn btn-primary">Sign Up</a>
-          </nav>
-        </div>
-      </header>
+    <div className="landing-container">
+      <nav className="navbar">
+        <div className="logo">
+          <img
+            src="https://i.postimg.cc/cLbWyd3Q/channels4_profile-removebg-preview_upscaled.png"
+            alt="Bangladesh University Logo"
+            className="uni-logo"
+          />
+          <h1 className="university-name">Bangladesh University</h1>
 
-      <section className="hero">
-        <div className="container hero-content">
-          <h2>Welcome to the Student Management System</h2>
-          <p>Manage students, track progress, communicate with faculty, and stay organized — all in one place.</p>
-          <div className="buttons">
-            <a href="#signin" className="btn">Sign In</a>
-            <a href="#signup" className="btn btn-primary">Sign Up</a>
-          </div>
         </div>
-      </section>
+        <div className="nav-buttons">
+          <button className="btn login-btn">Sign In</button>
+          <button className="btn signup-btn">Sign Up</button>
+        </div>
+      </nav>
 
-      <footer className="footer">
-        <p>&copy; 2025 University Student Management System. All rights reserved.</p>
-      </footer>
+      <main className="main-content">
+        <h1 className="main-title">
+          Welcome to 
+          <span className="software-name"> BU CONNECT</span>
+        </h1>
+        <p className="main-subtitle">
+          Your all-in-one university management system.
+        </p>
+        <button className="btn get-started-btn">Get Started</button>
+<section className="features">
+  <h2 className="features-title">Features</h2>
+  <div className="features-grid">
+    <div className="feature-box gradient1">
+      📚<span>Manage Courses and Schedules</span>
+    </div>
+    <div className="feature-box gradient2">
+      👩‍🎓<span>Student & Faculty Profiles</span>
+    </div>
+    <div className="feature-box gradient3">
+      📝<span>Attendance and Grades Tracking</span>
+    </div>
+    <div className="feature-box gradient4">
+      📢<span>Real-time Notifications</span>
+    </div>
+
+  </div>
+</section>
+
+
+      </main>
+<footer className="footer">
+  <p>This is an open source project by Bangladesh University students.</p>
+</footer>
+
+
     </div>
   );
-};
-
-export default LandingPage;
+}
