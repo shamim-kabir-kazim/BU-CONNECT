@@ -1,27 +1,35 @@
-import React from 'https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js';
-import ReactDOM from 'https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js';
+import React from 'react';
 import './LandingPage.css';
 
 const LandingPage = () => {
   return (
-    <div className="landing-container">
+    <div className="landing-page">
       <header className="header">
-        <h1>Bangladesh University Student Management System</h1>
-        <p>Welcome to a modern student experience!</p>
+        <div className="container">
+          <h1 className="logo">UniManage</h1>
+          <nav>
+            <a href="#signin" className="btn">Sign In</a>
+            <a href="#signup" className="btn btn-primary">Sign Up</a>
+          </nav>
+        </div>
       </header>
-      <main className="main-content">
-        <div className="background-vector">
-          <div className="building"></div>
-          <div className="trees"></div>
-          <div className="students"></div>
+
+      <section className="hero">
+        <div className="container hero-content">
+          <h2>Welcome to the Student Management System</h2>
+          <p>Manage students, track progress, communicate with faculty, and stay organized — all in one place.</p>
+          <div className="buttons">
+            <a href="#signin" className="btn">Sign In</a>
+            <a href="#signup" className="btn btn-primary">Sign Up</a>
+          </div>
         </div>
-        <div className="overlay-text">
-          <h2>Manage Your Academic Journey</h2>
-          <button className="get-started">Get Started</button>
-        </div>
-      </main>
+      </section>
+
+      <footer className="footer">
+        <p>&copy; 2025 University Student Management System. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
 
-ReactDOM.render(<LandingPage />, document.getElementById('root'));
+export default LandingPage;
