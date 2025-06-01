@@ -5,8 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const ROLES = [
   { value: 'student', label: 'Student' },
   { value: 'faculty', label: 'Teacher' },
-  { value: 'coordinator', label: 'Coordinator' },
-  { value: 'staff', label: 'Staff' }
+  { value: 'coordinator', label: 'Coordinator' }
 ];
 
 const DEPARTMENTS = [
@@ -102,9 +101,16 @@ function SignUpPage() {
                     ))}
                   </select>
                   <span className="dropdown-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                      <path fill="#888" d="M7 10l5 5 5-5z"/>
-                    </svg>
+                    <img
+                      src="https://i.postimg.cc/7YnZYs4x/chevron-back-outline-svgrepo-com-1.png"
+                      alt=""
+                      style={{
+                        width: 18,
+                        height: 18,
+                        transform: "rotate(-90deg)",
+                        pointerEvents: "none"
+                      }}
+                    />
                   </span>
                 </div>
               </div>
@@ -139,7 +145,6 @@ function SignUpPage() {
         );
       case 'faculty':
       case 'coordinator':
-      case 'staff':
         return (
           <>
             <div className="sign-form-row">
@@ -147,9 +152,7 @@ function SignUpPage() {
                 <label htmlFor="name">
                   {role === 'coordinator'
                     ? 'Coordinator Name'
-                    : role === 'faculty'
-                      ? 'Teacher Name'
-                      : 'Staff Name'}
+                    : 'Teacher Name'}
                 </label>
                 <input
                   type="text"
@@ -177,9 +180,16 @@ function SignUpPage() {
                     ))}
                   </select>
                   <span className="dropdown-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                      <path fill="#888" d="M7 10l5 5 5-5z"/>
-                    </svg>
+                    <img
+                      src="https://i.postimg.cc/7YnZYs4x/chevron-back-outline-svgrepo-com-1.png"
+                      alt=""
+                      style={{
+                        width: 18,
+                        height: 18,
+                        transform: "rotate(-90deg)",
+                        pointerEvents: "none"
+                      }}
+                    />
                   </span>
                 </div>
               </div>
@@ -319,10 +329,24 @@ function SignUpPage() {
                   onClick={() => setStep(1)}
                   aria-label="Back"
                 >
-                  {/* SVG left arrow icon */}
-                  <svg width="22" height="22" viewBox="0 0 20 20" fill="none" style={{verticalAlign: 'middle', marginRight: 6}}>
-                    <path d="M12.5 16L7.5 10L12.5 4" stroke="#1976d2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <span className="back-icon-wrapper">
+                    <img
+                      src="https://i.postimg.cc/RFWTvJnB/chevron-back-outline-svgrepo-com-3.png"
+                      alt="Back"
+                      className="back-icon back-icon-black"
+                      width="25"
+                      height="25"
+                      draggable="false"
+                    />
+                    <img
+                      src="https://i.postimg.cc/c4SJWqV9/chevron-back-outline-svgrepo-com-2.png"
+                      alt="Back"
+                      className="back-icon back-icon-white"
+                      width="25"
+                      height="25"
+                      draggable="false"
+                    />
+                  </span>
                   Back
                 </button>
                 <button

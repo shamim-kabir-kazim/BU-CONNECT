@@ -282,14 +282,14 @@ html, body, #root {
   border: 2.4px solid #1976d2;
   outline: none;
   background: #ffffff;
+  border-radius: 30px;
 }
 
-/* Department image menu styling */
+/* Custom dropdown wrapper to position the icon */
 .sign-form-group-dropdown {
   position: relative;
 }
 
-/* Custom dropdown wrapper to position the icon */
 .custom-dropdown-wrapper {
   position: relative;
   width: 100%;
@@ -311,22 +311,32 @@ html, body, #root {
   transition: border 0.2s;
   outline: none;
   height: 46px;
+  line-height: 1.5;
 }
 .custom-dropdown-wrapper select:focus {
-  border: 2.4px solid #1976d2;
+  border: 1.4px solid #1976d2;
   background: #ffffff;
-  border-radius: 30px;
+  
 }
+.custom-dropdown-wrapper select::-ms-expand { display: none; } /* for IE11 */
+
 .dropdown-icon {
   position: absolute;
   right: 16px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(0deg);
   pointer-events: none;
   display: flex;
   align-items: center;
   height: 100%;
 }
+.dropdown-icon img {
+  display: block;
+  width: 18px;
+  height: 18px;
+  transform: rotate(-90deg);
+}
+
 .sign-signup-error {
   color: #d90429;
   font-size: 1.09rem;
@@ -356,6 +366,7 @@ html, body, #root {
   box-shadow: 0 8px 20px rgba(42, 133, 217, 0.10);
 }
 
+/* Back button with custom icon swap */
 .sign-link-btn.sign-back-btn {
   background: #f6f6fa;
   border: 1.5px solid #1976d2;
@@ -372,7 +383,37 @@ html, body, #root {
   align-items: center;
   gap: 0.3em;
 }
-.sign-link-btn.sign-back-btn:hover {
+.back-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 6px;
+  height: 25px;
+  width: 25px;
+  position: relative;
+}
+.back-icon {
+  position: absolute;
+  left: 0; top: 0;
+  width: 25px;
+  height: 25px;
+  display: block;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+.back-icon-black { opacity: 1; }
+.back-icon-white { opacity: 0; }
+/* On hover/focus, swap icons */
+.sign-link-btn.sign-back-btn:hover .back-icon-black,
+.sign-link-btn.sign-back-btn:focus .back-icon-black {
+  opacity: 0;
+}
+.sign-link-btn.sign-back-btn:hover .back-icon-white,
+.sign-link-btn.sign-back-btn:focus .back-icon-white {
+  opacity: 1;
+}
+
+.sign-link-btn.sign-back-btn:hover,
+.sign-link-btn.sign-back-btn:focus {
   background: #1976d2;
   color: #fff;
   border: 1.5px solid #1976d2;
