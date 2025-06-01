@@ -5,11 +5,21 @@ import { useNavigate } from 'react-router-dom';
 const ROLES = [
   { value: 'student', label: 'Student' },
   { value: 'faculty', label: 'Teacher' },
-  { value: 'coordinator', label: 'Coordinator' }
+  { value: 'coordinator', label: 'Coordinator' },
+  { value: 'staff', label: 'Staff' }
 ];
 
 const DEPARTMENTS = [
-  'CSE', 'EEE', 'BBA', 'English', 'Law', 'Civil', 'Textile', 'Pharmacy', 'Architecture', 'Other'
+  { value: 'CSE', label: 'CSE' },
+  { value: 'EEE', label: 'EEE' },
+  { value: 'BBA', label: 'BBA' },
+  { value: 'English', label: 'English' },
+  { value: 'Law', label: 'Law' },
+  { value: 'Civil', label: 'Civil' },
+  { value: 'Textile', label: 'Textile' },
+  { value: 'Pharmacy', label: 'Pharmacy' },
+  { value: 'Architecture', label: 'Architecture' },
+  { value: 'Other', label: 'Other' },
 ];
 
 function SignUpPage() {
@@ -76,20 +86,27 @@ function SignUpPage() {
                   required
                 />
               </div>
-              <div className="sign-form-group">
+              <div className="sign-form-group sign-form-group-dropdown">
                 <label htmlFor="department">Department</label>
-                <select
-                  id="department"
-                  name="department"
-                  value={form.department}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="" disabled>Select department</option>
-                  {DEPARTMENTS.map(dep => (
-                    <option value={dep} key={dep}>{dep}</option>
-                  ))}
-                </select>
+                <div className="custom-dropdown-wrapper">
+                  <select
+                    id="department"
+                    name="department"
+                    value={form.department}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="" disabled>Select department</option>
+                    {DEPARTMENTS.map(dep => (
+                      <option value={dep.value} key={dep.value}>{dep.label}</option>
+                    ))}
+                  </select>
+                  <span className="dropdown-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill="#888" d="M7 10l5 5 5-5z"/>
+                    </svg>
+                  </span>
+                </div>
               </div>
             </div>
             <div className="sign-form-row">
@@ -122,35 +139,49 @@ function SignUpPage() {
         );
       case 'faculty':
       case 'coordinator':
+      case 'staff':
         return (
           <>
             <div className="sign-form-row">
               <div className="sign-form-group">
-                <label htmlFor="name">{role === 'coordinator' ? 'Coordinator' : 'Teacher'} Name</label>
+                <label htmlFor="name">
+                  {role === 'coordinator'
+                    ? 'Coordinator Name'
+                    : role === 'faculty'
+                      ? 'Teacher Name'
+                      : 'Staff Name'}
+                </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  placeholder={`Enter your name`}
+                  placeholder="Enter your name"
                   required
                 />
               </div>
-              <div className="sign-form-group">
+              <div className="sign-form-group sign-form-group-dropdown">
                 <label htmlFor="department">Department</label>
-                <select
-                  id="department"
-                  name="department"
-                  value={form.department}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="" disabled>Select department</option>
-                  {DEPARTMENTS.map(dep => (
-                    <option value={dep} key={dep}>{dep}</option>
-                  ))}
-                </select>
+                <div className="custom-dropdown-wrapper">
+                  <select
+                    id="department"
+                    name="department"
+                    value={form.department}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="" disabled>Select department</option>
+                    {DEPARTMENTS.map(dep => (
+                      <option value={dep.value} key={dep.value}>{dep.label}</option>
+                    ))}
+                  </select>
+                  <span className="dropdown-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill="#888" d="M7 10l5 5 5-5z"/>
+                    </svg>
+                  </span>
+                </div>
               </div>
             </div>
             <div className="sign-form-row">
