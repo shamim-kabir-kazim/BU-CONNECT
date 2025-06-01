@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const ROLES = [
   { value: 'student', label: 'Student' },
-  { value: 'faculty', label: 'Faculty' },
+  { value: 'faculty', label: 'Teacher' },
   { value: 'admin', label: 'Admin' },
   { value: 'staff', label: 'Staff' },
 ];
@@ -125,12 +125,13 @@ function SignUpPage() {
         </div>
       </header>
       <main className="sign-signup-main">
-        <div className="sign-signup-card">
+        <div className="sign-signup-card sign-signup-card-large">
           {step === 1 && (
             <>
-              <h2 className="sign-signup-title">Sign Up for BU Connect</h2>
-              <div className="sign-role-select">
-                <p className="sign-role-select-label">Choose your role:</p>
+              <h2 className="sign-signup-title">Sign Up</h2>
+              <div className="sign-grad">
+                <p className="sign-role-select-label">Select your role</p>
+                <div className="sign-role-underline" />
                 <div className="sign-role-options">
                   {ROLES.map((r) => (
                     <button
@@ -143,8 +144,15 @@ function SignUpPage() {
                     </button>
                   ))}
                 </div>
-                {error && <div className="sign-signup-error">{error}</div>}
-                <button className="sign-btn sign-continue-btn" type="button" onClick={handleContinue}>
+              </div>
+              {error && <div className="sign-signup-error">{error}</div>}
+              <div className="sign-role-actions">
+                <button
+                  className="sign-btn sign-continue-btn"
+                  type="button"
+                  onClick={handleContinue}
+                  disabled={!role}
+                >
                   Continue
                 </button>
               </div>
@@ -182,17 +190,22 @@ function SignUpPage() {
               </div>
               {renderRoleFields()}
               {error && <div className="sign-signup-error">{error}</div>}
-              <button type="submit" className="sign-btn sign-signup-btn">
-                Sign Up
-              </button>
-              <button
-                type="button"
-                className="sign-link-btn sign-back-btn"
-                onClick={() => setStep(1)}
-                style={{ marginTop: "1rem" }}
-              >
-                &larr; Back
-              </button>
+              <div className="sign-signup-form-actions">
+                <button
+                  type="submit"
+                  className="sign-btn sign-signup-btn"
+                >
+                  Sign Up
+                </button>
+                <button
+                  type="button"
+                  className="sign-link-btn sign-back-btn"
+                  onClick={() => setStep(1)}
+                  style={{ marginTop: "1rem" }}
+                >
+                  &larr; Back
+                </button>
+              </div>
             </form>
           )}
         </div>

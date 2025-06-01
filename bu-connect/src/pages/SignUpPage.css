@@ -30,7 +30,6 @@ html, body, #root {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
@@ -87,92 +86,129 @@ html, body, #root {
   overflow: hidden;
 }
 
-.sign-signup-card {
+.sign-signup-card,
+.sign-signup-card-large {
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(44, 41, 120, 0.13);
-  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(44, 41, 120, 0.13);
+  padding: 2.5rem 1.4rem 1.7rem 1.4rem;
   max-width: 370px;
+  min-width: 0;
   width: 100%;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .sign-signup-title {
-  font-size: 1.65rem;
+  width: 100%;
+  text-align: center;
+  font-size: 2.1rem;
   font-weight: 700;
   color: #1976d2;
-  margin-bottom: 2rem;
-  text-align: center;
+  margin: 0 0 1.2rem 0;
   letter-spacing: 1px;
 }
 
-.sign-role-select {
+.sign-grad {
   width: 100%;
+  background: linear-gradient(135deg, #e5edfa 0%, #d1e6fa 100%);
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 0.7rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.sign-role-select-label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  color: #333;
+  letter-spacing: 0.5px;
+  text-align: left;
 }
 
-.sign-role-select-label {
-  font-size: 1.12rem;
-  font-weight: 550;
-  margin-bottom: 0.7rem;
+.sign-role-underline {
+  width: 90%;
+  height: 3.5px;
+  background: #6176ac;
+  margin-bottom: 1.9rem;
+  border-radius: 2px;
+  
 }
 
 .sign-role-options {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  justify-content: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0;
   width: 100%;
 }
 
 .sign-role-btn {
+  min-width: 85px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1.3rem;
+  border-radius: 25px;
+  border: 2px solid #1976d2;
   background: #f3f4fa;
   color: #1976d2;
-  border: 2px solid #1976d2;
-  border-radius: 25px;
-  padding: 0.5rem 1.4rem;
-  font-size: 1.05rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  margin-bottom: 0.2rem;
+  transition: background 0.15s, color 0.15s, border 0.2s;
   outline: none;
   box-shadow: none;
 }
 .sign-role-btn.selected,
 .sign-role-btn:active,
 .sign-role-btn:focus {
-  background: linear-gradient(135deg, #1976d2, #3399ff);
-  color: #fff;
+  background: #1976d2;
+  color: #fff !important;
   border: 2px solid #1976d2;
   outline: none;
   box-shadow: none;
 }
 
+.sign-role-actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.8rem;
+}
+
 .sign-btn.sign-continue-btn {
-  background: linear-gradient(135deg, #0066ff, #3399ff);
+  background: #1976d2;
   color: white;
-  padding: 0.7rem 1.7rem;
+  padding: 0.7rem 2.5rem;
   font-size: 1.14rem;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
-  margin-top: 0.7rem;
-  transition: all 0.3s;
-  box-shadow: 0 4px 10px rgba(44, 169, 90, 0.12);
-  width: 100%;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  opacity: 1;
+  box-shadow: 0 4px 10px rgba(44, 169, 90, 0.10);
+  margin-left: auto;
 }
 
-.sign-btn.sign-continue-btn:hover {
-  background: #fff;
-  color: #1976d2;
-  border: 2px solid #1976d2;
-  box-shadow: 0 8px 20px rgba(42, 133, 217, 0.10);
+.sign-btn.sign-continue-btn:disabled {
+  background: #aebed8;
+  color: #fff;
+  cursor: not-allowed;
+  opacity: 0.7;
+  border: none;
+}
+
+.sign-btn.sign-continue-btn:hover:enabled {
+  background: #1252a0;
+  color: #fff;
 }
 
 .sign-signup-form {
@@ -180,6 +216,14 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
+}
+
+.sign-signup-form-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .sign-form-group {
@@ -190,7 +234,7 @@ html, body, #root {
 }
 
 .sign-form-group label {
-  font-size: 1.04rem;
+  font-size: 1.07rem;
   font-weight: 500;
   margin-bottom: 0.3rem;
   color: #8453df;
@@ -198,10 +242,10 @@ html, body, #root {
 
 .sign-form-group input {
   width: 100%;
-  padding: 0.7rem 1rem;
+  padding: 0.78rem 1.1rem;
   border-radius: 30px;
-  border: 1.5px solid #e0e0e0;
-  font-size: 1.06rem;
+  border: 1.7px solid #e0e0e0;
+  font-size: 1.13rem;
   background: #f6f6fa;
   color: #222;
   transition: border 0.2s;
@@ -209,28 +253,28 @@ html, body, #root {
 }
 
 .sign-form-group input:focus {
-  border: 2px solid #1976d2;
+  border: 2.4px solid #1976d2;
   outline: none;
   background: #ffffff;
 }
 
 .sign-signup-error {
   color: #d90429;
-  font-size: 1.06rem;
+  font-size: 1.09rem;
   margin-bottom: 0.7rem;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
 .sign-btn.sign-signup-btn {
   background: linear-gradient(135deg, #0066ff, #3399ff);
   color: white;
-  padding: 0.7rem 1.7rem;
-  font-size: 1.13rem;
+  padding: 0.78rem 2rem;
+  font-size: 1.15rem;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 0.5rem;
   transition: all 0.3s;
   box-shadow: 0 4px 10px rgba(44, 169, 90, 0.12);
@@ -285,12 +329,20 @@ html, body, #root {
   font-size: 0.9rem;
 }
 
-@media (max-width: 600px) {
-  .sign-signup-card {
-    padding: 1.5rem 0.5rem;
-    max-width: 97vw;
+/* Responsive */
+@media (max-width: 800px) {
+  .sign-signup-card,
+  .sign-signup-card-large {
+    max-width: 98vw;
+    min-width: 0;
+    padding: 1.5rem 0.7rem 1rem 0.7rem;
   }
   .sign-header-content {
     padding: 1rem 0.5rem;
+  }
+  .sign-role-btn {
+    min-width: 60px;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.93rem;
   }
 }
