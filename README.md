@@ -53,10 +53,6 @@ Welcome to **BU CONNECT** – your all-in-one university management system for B
 Contributions are welcome!  
 Feel free to fork, open issues, or submit pull requests.
 
-## 📝 License
 
-MIT
-
----
 
 > Made with ❤️ by Bangladesh University students.
