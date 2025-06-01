@@ -7,12 +7,13 @@ html, body, #root {
   box-sizing: border-box;
 }
 
+/* Grid layout for header, main, footer, to avoid touching */
 .sign-signup-container {
   min-height: 100vh;
   height: 100vh;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   background: #f9f9f9;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
@@ -23,6 +24,7 @@ html, body, #root {
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
+  z-index: 2;
 }
 
 .sign-header-content {
@@ -78,12 +80,13 @@ html, body, #root {
 }
 
 .sign-signup-main {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
-  overflow: hidden;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+  width: 100%;
+  min-height: 0;
+  background: transparent;
 }
 
 .sign-signup-card,
@@ -92,7 +95,7 @@ html, body, #root {
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(44, 41, 120, 0.13);
   padding: 2.5rem 1.4rem 1.7rem 1.4rem;
-  max-width: 370px;
+  max-width: 420px;
   min-width: 0;
   width: 100%;
   min-height: 0;
@@ -100,8 +103,13 @@ html, body, #root {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  transition: max-width 0.32s cubic-bezier(0.5, 1.5, 0.5, 1), width 0.32s cubic-bezier(0.5, 1.5, 0.5, 1);
 }
 
+/* When on step 2, make the card wider */
+.sign-signup-card.in-form-step {
+  max-width: 620px;
+}
 .sign-signup-title {
   width: 100%;
   text-align: center;
@@ -110,6 +118,11 @@ html, body, #root {
   color: #1976d2;
   margin: 0 0 1.2rem 0;
   letter-spacing: 1px;
+}
+
+.sign-signup-title-form {
+  margin: 0 0 1.2rem 0;
+  font-size: 1.23rem;
 }
 
 .sign-grad {
@@ -131,16 +144,14 @@ html, body, #root {
   letter-spacing: 0.5px;
   text-align: left;
 }
-
 .sign-role-underline {
   width: 90%;
   height: 3.5px;
   background: #6176ac;
+  opacity: 0.2;
   margin-bottom: 1.9rem;
   border-radius: 2px;
-  
 }
-
 .sign-role-options {
   display: flex;
   flex-wrap: wrap;
@@ -149,7 +160,6 @@ html, body, #root {
   margin-bottom: 0;
   width: 100%;
 }
-
 .sign-role-btn {
   min-width: 85px;
   font-family: inherit;
@@ -224,6 +234,20 @@ html, body, #root {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.sign-form-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+@media (max-width: 500px) {
+  .sign-form-row {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
 }
 
 .sign-form-group {
@@ -240,7 +264,8 @@ html, body, #root {
   color: #8453df;
 }
 
-.sign-form-group input {
+.sign-form-group input,
+.sign-form-group select {
   width: 100%;
   padding: 0.78rem 1.1rem;
   border-radius: 30px;
@@ -252,7 +277,8 @@ html, body, #root {
   box-sizing: border-box;
 }
 
-.sign-form-group input:focus {
+.sign-form-group input:focus,
+.sign-form-group select:focus {
   border: 2.4px solid #1976d2;
   outline: none;
   background: #ffffff;
@@ -287,23 +313,27 @@ html, body, #root {
   box-shadow: 0 8px 20px rgba(42, 133, 217, 0.10);
 }
 
-/* Back link */
 .sign-link-btn.sign-back-btn {
-  background: none;
-  border: none;
-  color: #2a85d9;
+  background: #f6f6fa;
+  border: 1.5px solid #1976d2;
+  color: #1976d2;
   font-weight: 600;
   cursor: pointer;
-  font-size: 1rem;
-  padding: 0;
-  margin: 0;
-  transition: color 0.2s;
-  text-decoration: underline;
+  font-size: 1.04rem;
+  padding: 0.5rem 1.3rem 0.5rem 1.1rem;
+  border-radius: 25px;
+  transition: background 0.17s, color 0.17s, border 0.17s;
+  text-decoration: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  margin-right: auto;
 }
-
 .sign-link-btn.sign-back-btn:hover {
-  color: #8453df;
-  text-decoration: underline;
+  background: #1976d2;
+  color: #fff;
+  border: 1.5px solid #1976d2;
 }
 
 /* Remove focus/active outlines for all buttons */
@@ -327,6 +357,7 @@ html, body, #root {
   text-align: center;
   padding: 0.7rem;
   font-size: 0.9rem;
+  z-index: 2;
 }
 
 /* Responsive */
