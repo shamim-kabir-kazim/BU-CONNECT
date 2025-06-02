@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
-import SignUpPage from './pages/SignUpPage'; // <-- Import this
+import SignUpPage from './pages/SignUpPage';
 import LandingPage from './pages/LandingPage';
+import AdminDashboard from './pages/AdminDashboard'; // <-- Import AdminDashboard
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} /> {/* <-- Add this */}
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} /> {/* <-- Add this route */}
       </Routes>
     </Router>
   );

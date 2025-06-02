@@ -7,6 +7,12 @@ function LoginPage() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  // Demo admin credentials
+  const demoAdmin = {
+    id: '2023110650',
+    password: 'password'
+  };
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -17,9 +23,17 @@ function LoginPage() {
       setError('Please enter both ID and password.');
       return;
     }
-    setError('');
+
+    // Demo admin login check
+    if (form.id === demoAdmin.id && form.password === demoAdmin.password) {
+      setError('');
+      navigate('/admin-dashboard');
+      return;
+    }
+
+    setError('Invalid ID or password.');
     // TODO: connect to backend authentication
-    alert('Login submitted! (implement backend)');
+    // alert('Login submitted! (implement backend)');
   };
 
   return (
@@ -35,15 +49,6 @@ function LoginPage() {
             <span className="log-university-name">Bangladesh University</span>
           </div>
           {/* Sign Up button removed from login page header */}
-          {/* <div className="log-header-right">
-            <button
-              className="log-btn log-signup-btn"
-              type="button"
-              onClick={() => navigate('/signup')}
-            >
-              Sign Up
-            </button>
-          </div> */}
         </div>
       </header>
 
@@ -90,6 +95,7 @@ function LoginPage() {
               Forgot password?
             </button>
           </div>
+       
         </div>
       </main>
 
