@@ -7,22 +7,22 @@ function LandingPage() {
 
   return (
     <div className="landing-container">
-<header className="header">
-  <div className="header-content">
-    <div className="header-left">
-      <img
-        src="https://i.postimg.cc/cLbWyd3Q/channels4_profile-removebg-preview_upscaled.png"
-        alt="BU Logo"
-        className="logo"
-      />
-      <span className="university-name">Bangladesh University</span>
-    </div>
-    <div className="header-right">
-      <button className="btn login" onClick={() => navigate('/login')}>Sign In</button>
-      <button className="btn signup" onClick={() => navigate('/signup')} >Sign Up</button>
-    </div>
-  </div>
-</header>
+      <header className="header">
+        <div className="header-content">
+          <div className="header-left">
+            <img
+              src="https://i.postimg.cc/cLbWyd3Q/channels4_profile-removebg-preview_upscaled.png"
+              alt="BU Logo"
+              className="logo"
+            />
+            <span className="university-name">Bangladesh University</span>
+          </div>
+          <div className="header-right">
+            <button className="btn login" onClick={() => navigate('/login')}>Sign In</button>
+            {/* Sign Up button removed */}
+          </div>
+        </div>
+      </header>
 
       <main className="main-content">
         <h1 className="main-heading">

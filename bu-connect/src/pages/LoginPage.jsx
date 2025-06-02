@@ -34,7 +34,8 @@ function LoginPage() {
             />
             <span className="log-university-name">Bangladesh University</span>
           </div>
-          <div className="log-header-right">
+          {/* Sign Up button removed from login page header */}
+          {/* <div className="log-header-right">
             <button
               className="log-btn log-signup-btn"
               type="button"
@@ -42,7 +43,7 @@ function LoginPage() {
             >
               Sign Up
             </button>
-          </div>
+          </div> */}
         </div>
       </header>
 
