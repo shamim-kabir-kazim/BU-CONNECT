@@ -14,6 +14,7 @@ import {
   FaCalendarAlt,
   FaTrophy,
 } from "react-icons/fa";
+import AdminContent from "./AdminContent"; // Import AdminContent
 
 const demoStats = {
   totalStudents: 1200,
@@ -90,7 +91,7 @@ const AdminDashboard = () => {
           </ul>
         </aside>
 
-        {/* Right Side Content (Empty for now) */}
+        {/* Right Side Content (Now AdminContent is called here) */}
         <section
           className="right-content"
           style={{
@@ -100,7 +101,7 @@ const AdminDashboard = () => {
             boxSizing: "border-box",
           }}
         >
-          
+          <AdminContent />
         </section>
       </div>
 
