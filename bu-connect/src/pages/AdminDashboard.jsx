@@ -50,11 +50,59 @@ const AdminDashboard = () => {
             <FaCogs className="admin-header-icon" title="Settings" />
             <span className="admin-header-divider" />
             <FaUserCircle className="admin-header-account" title="Account" />
-            <FaSignOutAlt className="admin-header-icon" title="Logout" style={{ marginLeft: "10px" }} />
+            <FaSignOutAlt
+              className="admin-header-icon"
+              title="Logout"
+              style={{ marginLeft: "10px" }}
+            />
           </nav>
         </div>
       </header>
 
+      {/* Middle Section */}
+      <div className="middle-section" style={{ display: "flex", height: "calc(100vh - 120px)" }}>
+        {/* Left Side Menu */}
+        <aside
+          className="left-menu"
+          style={{
+            width: "220px",
+            backgroundColor: "#2f3e46",
+            color: "white",
+            padding: "20px",
+            boxSizing: "border-box",
+          }}
+        >
+          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+            {menuOptions.map(({ icon, label }, index) => (
+              <li
+                key={index}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginBottom: "20px",
+                  cursor: "pointer",
+                }}
+              >
+                <span style={{ marginRight: "10px", fontSize: "18px" }}>{icon}</span>
+                <span style={{ fontSize: "16px" }}>{label}</span>
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        {/* Right Side Content (Empty for now) */}
+        <section
+          className="right-content"
+          style={{
+            flex: 1,
+            backgroundColor: "#f4f4f4",
+            padding: "20px",
+            boxSizing: "border-box",
+          }}
+        >
+          
+        </section>
+      </div>
 
       {/* Footer */}
       <footer className="footer">

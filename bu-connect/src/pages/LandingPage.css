@@ -1,4 +1,4 @@
-.landing-container {
+.bxolanding-container {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -9,75 +9,73 @@
   box-sizing: border-box;
 }
 
-.header {
+.bxoheader {
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
 
-.header-content {
+.bxoheader-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  max-width: 99vw;     /* Or whatever max width you want */
-  margin: 0 auto;        /* Center the content horizontally */
+  max-width: 99vw;
+  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 }
 
-
-.header-left {
+.bxoheader-left {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-.logo {
-  height: 70px; /* Increased size */
+.bxologo {
+  height: 70px;
 }
 
-.university-name {
-  font-size: 2.2rem; /* Increased size */
+.bxouniversity-name {
+  font-size: 2.2rem;
   font-weight: bold;
-  color: #d90429; /* Red */
+  color: #d90429;
 }
 
-.header-right {
+.bxoheader-right {
   display: flex;
   gap: 1rem;
 }
 
 /* Buttons */
-/* Buttons */
-.btn {
+.bxobtn {
   padding: 0.6rem 1.5rem;
   font-size: 1.1rem;
   border: none;
-  border-radius: 30px; /* Rounded, pill shape */
+  border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
   color: white;
   font-weight: 600;
 }
 
-.btn,
-.login,
-.signup,
-.get-started {
+.bxobtn,
+.bxologin,
+.bxosignup,
+.bxoget-started {
   outline: none;
   box-shadow: none;
 }
 
-.btn:focus,
-.login:focus,
-.signup:focus,
-.get-started:focus {
+.bxobtn:focus,
+.bxologin:focus,
+.bxosignup:focus,
+.bxoget-started:focus {
   outline: none;
   box-shadow: none;
 }
 
-.feature-box span {
+.bxofeature-box span {
   font-size: 1.1rem;
   font-weight: 600;
   color: white;
@@ -90,11 +88,11 @@
   margin: 0 auto;
 }
 
-.login {
+.bxologin {
   background-color: transparent;
   color: #2a85d9;
   border: 2px solid #2a85d9;
-  border-radius: 30px; /* Rounded, pill shape */
+  border-radius: 30px;
   padding: 0.6rem 1.5rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -103,25 +101,25 @@
   background-clip: padding-box;
 }
 
-.login:hover {
+.bxologin:hover {
   background: linear-gradient(135deg, #004ecc, #2a85d9);
   color: white;
   box-shadow: 0 8px 20px rgba(42, 133, 217, 0.6);
 }
 
-.signup {
+.bxosignup {
   background: linear-gradient(135deg, #0066ff, #3399ff);
   color: white;
   transition: all 0.3s ease;
 }
 
-.signup:hover {
-  background: #ffffff; /* Solid white background */
-  color: #000000;      /* Turn text black */
+.bxosignup:hover {
+  background: #ffffff;
+  color: #000000;
   box-shadow: 0 8px 20px rgba(44, 169, 90, 0.6);
 }
 
-.get-started {
+.bxoget-started {
   margin: 1rem 0 5rem;
   background: linear-gradient(135deg, #007bff, #007bff);
   box-shadow: 0 6px 18px rgb(255, 255, 255);
@@ -129,11 +127,12 @@
   font-size: 1.3rem;
 }
 
-.get-started:hover {
+.bxoget-started:hover {
   background: linear-gradient(135deg, #6a97ca, #3a95be);
   box-shadow: 0 10px 25px rgba(107, 73, 187, 0.8);
 }
-.section-title {
+
+.bxosection-title {
   font-size: 1.7rem;
   font-weight: 700;
   text-align: center;
@@ -144,7 +143,7 @@
   position: relative;
 }
 
-.section-title::after {
+.bxosection-title::after {
   content: '';
   display: block;
   width: 60px;
@@ -155,7 +154,7 @@
 }
 
 /* Main content */
-.main-content {
+.bxomain-content {
   flex: 1;
   padding: 1rem 2rem;
   display: flex;
@@ -165,22 +164,22 @@
   text-align: center;
 }
 
-.main-heading {
+.bxomain-heading {
   font-size: 2.9rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
   text-align: center;
 }
 
-.welcome-text {
-  color: #182e79; /* example: deep orange */
+.bxowelcome-text {
+  color: #182e79;
 }
 
-.bu-text {
-  color: #1976d2; /* example: deep blue */
+.bxobu-text {
+  color: #1976d2;
 }
 
-.tagline {
+.bxotagline {
   font-size: 1.3rem;
   font-weight: 500;
   color: #555;
@@ -188,7 +187,7 @@
 }
 
 /* Features grid */
-.features {
+.bxofeatures {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
@@ -196,7 +195,7 @@
   max-width: 1200px;
 }
 
-.feature-box {
+.bxofeature-box {
   height: 160px;
   border-radius: 15px;
   color: white;
@@ -204,8 +203,8 @@
   font-weight: 600;
   display: flex;
   flex-direction: column;
-  align-items: center;       /* Center horizontally */
-  justify-content: center;   /* Center vertically */
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   user-select: none;
   transition: transform 0.3s ease;
@@ -213,35 +212,35 @@
   text-align: center;
 }
 
-.feature-box:hover {
+.bxofeature-box:hover {
   transform: scale(1.05);
 }
 
-.feature-icon {
+.bxofeature-icon {
   width: 40px;
   height: 40px;
-  margin-bottom: 0.5rem; /* Space between image and text */
+  margin-bottom: 0.5rem;
 }
 
 /* Gradient colors */
-.gradient1 {
+.bxogradient1 {
   background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
-.gradient2 {
+.bxogradient2 {
   background: linear-gradient(135deg, #f7971e, #ffd200);
 }
 
-.gradient3 {
+.bxogradient3 {
   background: linear-gradient(135deg, #00c9ff, #92fe9d);
 }
 
-.gradient4 {
+.bxogradient4 {
   background: linear-gradient(135deg, #f953c6, #b91d73);
 }
 
 /* Footer */
-.footer {
+.bxofooter {
   background-color: #222;
   color: #fff;
   text-align: center;
