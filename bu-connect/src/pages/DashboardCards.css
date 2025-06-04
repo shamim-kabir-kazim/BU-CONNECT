@@ -1,0 +1,86 @@
+.dashboard-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card {
+  width: 345px;
+  height: 202px;
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.card-total {
+  position: absolute;
+  top: 126px;
+  left: 86px;
+  color: black;
+  font-size: 24px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+}
+
+.card-image {
+  position: absolute;
+  top: 26px;
+  left: 126px;
+  width: 100px;
+  height: 100px;
+}
+
+.card-footer {
+  position: absolute;
+  top: 162px;
+  left: 0;
+  height: 34px;
+  width: 345px;
+  overflow: hidden;
+  display: flex;
+  gap: 16px;
+  padding-left: 4px;
+  align-items: center;
+}
+
+.card-gender {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.card-gender img {
+  width: 16px;
+  height: 16px;
+}
+
+.male-count {
+  color: #D64646;
+  font-size: 12px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+}
+
+.male-label {
+  color: #D64646;
+  font-size: 11px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+}
+
+.female-count {
+  color: #4DB1FD;
+  font-size: 12px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+}
+
+.female-label {
+  color: #4DB1FD;
+  font-size: 11px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+}

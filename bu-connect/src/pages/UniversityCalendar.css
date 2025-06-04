@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+}
+
+.calendar {
+  max-width: 700px;
+  max-height: 300px;
+  margin: 15px auto;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 8px;
+}
+
+.header h2 {
+  font-size: 16px;
+  color: #1e293b;
+  margin: 0;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  text-align: center;
+}
+
+.day-header {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 5px;
+  background: #1e40af;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.day {
+  padding: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  min-height: 30px;
+  background: #f8fafc;
+  cursor: pointer;
+  font-size: 9px;
+  color: #334155;
+  transition: background 0.2s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.day:hover {
+  background: #e2e8f0;
+}
+
+.event {
+  background: #dbeafe;
+  padding: 1px 3px;
+  margin: 1px 0;
+  border-radius: 3px;
+  font-size: 7px;
+  color: #1e40af;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+button {
+  padding: 5px 10px;
+  background: #1e40af;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 10px;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1e3a8a;
+}

@@ -1,22 +1,25 @@
 .admin-dashboard {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   font-family: 'Inter', Arial, sans-serif;
   background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .admin-header {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
+  width: 100%;
+  z-index: 10;
 }
 
 .admin-header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -32,9 +35,9 @@
 }
 
 .admin-university-name {
-  font-size: 24px;
+  font-size: 2.2rem;
   font-weight: 700;
-  color: #431934;
+  color: #d90429;
 }
 
 .admin-header-nav {
@@ -61,176 +64,190 @@
 }
 
 .footer {
-  background: #fff;
-  padding: 20px;
+  background: #222;
+  color: #fff;
+  padding: 0.7rem;
   text-align: center;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
   margin-top: auto;
-}
-
-.footer p {
-  margin: 0;
-  color: #555;
-  font-size: 14px;
-}
-
-.MiddleSection {
-  width: 1440px;
-  height: 862px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  margin: 20px auto;
-}
-
-.Menu {
-  width: 307px;
-  height: 810px;
-  position: absolute;
+  width: 100vw;
+  position: fixed;
   left: 0;
-  top: 24px;
+  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+}
+
+.middle-layout-flex {
+  flex: 1 1 0;
+  display: flex;
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+  padding-bottom: 56px; /* For footer */
+  box-sizing: border-box;
+}
+
+/* Side Menu */
+.Menu {
+  width: 260px;
+  min-width: 220px;
+  max-width: 300px;
   background: #FB9D9D;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  gap: 24px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.02);
+  height: calc(100vh - 96px);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
-.MenuItem {
-  width: 272px;
-  height: 71px;
-  background: white;
+/* Menu Option */
+.MenuOption {
+  width: 90%;
+  min-width: 170px;
+  height: 56px;
+  background: #fff;
   border-radius: 15px;
-  position: absolute;
-  left: 21px;
+  margin-left: 18px;
   display: flex;
   align-items: center;
-  padding: 0 15px;
-  font-size: 16px;
+  padding: 0 20px;
+  font-size: 1.13rem;
   font-weight: 600;
   color: #431934;
   cursor: pointer;
+  transition: background 0.13s, color 0.13s;
+  box-shadow: 0 2px 6px rgba(251,157,157,0.08);
+  margin-bottom: 10px;
+}
+.MenuOption:hover, .MenuOption:active {
+  background: #fddcdc;
+  color: #d90429;
+}
+.MenuOptionIcon {
+  margin-right: 14px;
+  font-size: 1.4em;
 }
 
-.MenuItem svg {
-  margin-right: 10px;
-}
-
-.MenuItem:nth-child(1) { top: 32px; }
-.MenuItem:nth-child(2) { top: 124px; }
-.MenuItem:nth-child(3) { top: 216px; }
-.MenuItem:nth-child(4) { top: 308px; }
-.MenuItem:nth-child(5) { top: 400px; }
-
+/* Main Content Section */
 .Content {
-  width: 1108px;
-  height: 810px;
-  position: absolute;
-  left: 320px;
-  top: 24px;
-  background: #FAB4B4;
+  flex: 1 1 0;
+  margin: 0 0 0 10px;
+  padding: 30px 28px 0 28px;
   border-radius: 15px;
-  overflow: hidden;
-  padding: 20px;
+  background: #FAB4B4;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: calc(100vh - 96px);
 }
 
 .Totalnosection {
   width: 100%;
-  padding: 20px 34px;
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 22px;
   justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 32px;
 }
 
-.Frame8, .Frame9, .Frame10 {
-  flex: 1;
+.Frame {
+  flex: 1 1 160px;
+  max-width: 250px;
+  min-width: 170px;
   height: 202px;
-  position: relative;
   background: linear-gradient(180deg, #FAFAFA 0%, #D59E9E 54%, #4680A4 100%);
   border-radius: 10px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 28px;
+  position: relative;
 }
 
-.Icon {
-  width: 83px;
-  height: 81px;
+.IconImg {
+  width: 61px;
+  height: 59px;
   background: white;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  object-fit: contain;
+  display: block;
+  margin-bottom: 18px;
 }
 
 .TotalStudent {
-  position: absolute;
-  bottom: 40px;
   color: white;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
+  margin-top: 8px;
 }
 
 .StatValue {
-  position: absolute;
-  bottom: 20px;
   color: white;
   font-size: 24px;
   font-weight: 700;
+  text-align: center;
+  margin-top: 12px;
 }
 
-.InnerMiddle {
-  width: 1107px;
-  height: 548px;
-  position: absolute;
-  top: 242px;
-  left: 0;
-  overflow: hidden;
-}
-
+/* Notification Card (reuse Frame style) */
 .Frame11 {
-  width: 723px;
-  padding: 10px;
-  position: absolute;
-  left: 8px;
-  top: 15px;
-  background: white;
-  border-radius: 15px;
+  background: linear-gradient(180deg, #FAFAFA 0%, #fbbd1f 54%, #FB9D9D 100%);
+}
+
+.InnerMiddleSection {
+  display: flex;
+  width: 100%;
+  gap: 22px;
+  margin-top: 12px;
+  min-height: 260px;
+  flex-wrap: wrap;
+}
+
+.InnerLeft, .InnerRight {
+  flex: 1 1 320px;
+  min-width: 280px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  height: 255px;
 }
 
 .Frame13 {
   width: 100%;
-  height: 246px;
+  height: 100%;
   background: #C8E9ED;
   border-radius: 15px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 24px 12px;
 }
-
 .Frame14 {
   width: 100%;
-  height: 255px;
+  height: 100%;
   background: #D863BE;
   border-radius: 15px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 24px 12px;
 }
-
 .EventCalender, .DepartmentPerformance {
   font-size: 16px;
   font-weight: 700;
@@ -238,22 +255,60 @@
   align-items: center;
   margin-bottom: 15px;
 }
-
-.EventCalender {
-  color: black;
-}
-
-.DepartmentPerformance {
-  color: white;
-}
+.EventCalender { color: black; }
+.DepartmentPerformance { color: white; }
 
 .CalendarContent, .PerformanceContent {
-  color: #555;
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 26px;
+  width: 100%;
 }
+.PerformanceContent { color: white; }
 
-.PerformanceContent {
-  color: white;
+/* Responsive */
+@media (max-width: 1200px) {
+  .Totalnosection {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .Frame {
+    min-width: 160px;
+    max-width: 200px;
+  }
+  .InnerMiddleSection {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .Menu {
+    display: none;
+  }
+  .Content {
+    margin-left: 0;
+    padding: 14px 4vw 0 4vw;
+  }
+  .InnerMiddleSection, .Totalnosection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 600px) {
+  .admin-header-content {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .middle-layout-flex {
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+  .Content {
+    padding: 10px 2vw 0 2vw;
+  }
+  .footer {
+    font-size: 0.84rem;
+    padding: 0.7rem 3vw;
+  }
 }
