@@ -59,13 +59,13 @@ const AdminDashboard = () => {
           className="left-menu"
           style={{
             width: "220px",
-            
+            margin:"5px",
             color: "#fff",
             padding: "32px 0 32px 0",
             boxSizing: "border-box",
             borderTopRightRadius: "0px",
             borderBottomRightRadius: "0px",
-            
+            borderRight:"1px solid black",
             display: "flex",
             flexDirection: "column",
             alignItems: "stretch",
