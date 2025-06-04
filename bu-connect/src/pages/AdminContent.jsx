@@ -10,59 +10,59 @@ export default function AdminContent() {
         flexDirection: 'column',
       }}
     >
-      {/* con1 - small height */}
+      {/* con1 - smaller height */}
       <div
         className="con1"
         style={{
-          height: '30%',
+          height: '18%',
           backgroundColor: '#f2a2e8', // random light pink
         }}
       >
         con1
       </div>
 
-      {/* con2 - 70% height */}
+      {/* con2 - 82% height */}
       <div
         className="con2"
         style={{
-          height: '70%',
+          height: '82%',
           display: 'flex',
           flexDirection: 'row',
           backgroundColor: '#c2f0a2', // random green
         }}
       >
-        {/* con2r1 - 75% width */}
-        <div
-          className="con2r1"
-          style={{
-            width: '75%',
-            display: 'flex',
-            flexDirection: 'column',
-            backgroundColor: '#a2d5f2', // random blue
-          }}
-        >
-          {/* con2r1c1 */}
-          <div
-            className="con2r1c1"
-            style={{
-              flex: 1,
-              backgroundColor: '#f2c2a2', // random orange
-            }}
-          >
-            con2r1c1
-          </div>
-
-          {/* con2r1c2 */}
-          <div
-            className="con2r1c2"
-            style={{
-              flex: 1,
-              backgroundColor: '#d1a2f2', // random purple
-            }}
-          >
-            con2r1c2
-          </div>
-        </div>
+<div
+  className="con2r1"
+  style={{
+    width: '75%',
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: '#a2d5f2',
+    height: '100%',
+    minHeight: 0, // Important for Chrome/Edge flexbox bugs
+  }}
+>
+  <div
+    className="con2r1c1"
+    style={{
+      flex: 1,
+      backgroundColor: '#f2c2a2',
+      minHeight: 0,
+    }}
+  >
+    con2r1c1
+  </div>
+  <div
+    className="con2r1c2"
+    style={{
+      flex: 1,
+      backgroundColor: '#d1a2f2',
+      minHeight: 0,
+    }}
+  >
+    con2r1c2
+  </div>
+</div>
 
         {/* con2r2 - 25% width */}
         <div

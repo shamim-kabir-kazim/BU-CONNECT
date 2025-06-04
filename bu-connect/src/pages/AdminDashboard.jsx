@@ -11,16 +11,8 @@ import {
   FaEnvelope,
   FaSignOutAlt,
   FaUserCircle,
-  FaCalendarAlt,
-  FaTrophy,
 } from "react-icons/fa";
-import AdminContent from "./AdminContent"; // Import AdminContent
-
-const demoStats = {
-  totalStudents: 1200,
-  totalTeachers: 75,
-  totalCourses: 145,
-};
+import AdminContent from "./AdminContent";
 
 const menuOptions = [
   { icon: <FaChartBar />, label: "Overview" },
@@ -62,15 +54,22 @@ const AdminDashboard = () => {
 
       {/* Middle Section */}
       <div className="middle-section" style={{ display: "flex", height: "calc(100vh - 120px)" }}>
-        {/* Left Side Menu */}
+        {/* Modern Left Side Menu */}
         <aside
           className="left-menu"
           style={{
             width: "220px",
-            backgroundColor: "#2f3e46",
-            color: "white",
-            padding: "20px",
+            
+            color: "#fff",
+            padding: "32px 0 32px 0",
             boxSizing: "border-box",
+            borderTopRightRadius: "0px",
+            borderBottomRightRadius: "0px",
+            
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "stretch",
+            gap: "10px",
           }}
         >
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -80,18 +79,34 @@ const AdminDashboard = () => {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  marginBottom: "20px",
+                  margin: "0 16px 16px 16px",
                   cursor: "pointer",
+                  padding: "5px 5px",
+                  borderRadius: "10px",
+                
+                  fontWeight: 400,
+                  fontSize: "0.8rem",
+                  letterSpacing: '0.01em',
+                  transition: "background 0.17s, color 0.17s",
+                  boxShadow: "0 2px 10px rgba(0, 173, 181, 0.07)",
+                }}
+                onMouseOver={e => {
+                  e.currentTarget.style.background = "#00adb540";
+                  e.currentTarget.style.color = "#00fff5";
+                }}
+                onMouseOut={e => {
+                  e.currentTarget.style.background = "none";
+                  e.currentTarget.style.color = "#fff";
                 }}
               >
-                <span style={{ marginRight: "10px", fontSize: "18px" }}>{icon}</span>
-                <span style={{ fontSize: "16px" }}>{label}</span>
+                <span style={{ marginRight: "14px", fontSize: "22px" }}>{icon}</span>
+                <span>{label}</span>
               </li>
             ))}
           </ul>
         </aside>
 
-        {/* Right Side Content (Now AdminContent is called here) */}
+        {/* Right Side Content */}
         <section
           className="right-content"
           style={{
